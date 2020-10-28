@@ -1,0 +1,50 @@
+{
+  "page": {
+    "home": {
+      "title1": "Full-Stack Developer.",
+      "title2": "With experience in designing & developing custom websites.",
+      "jumbotron": {
+        "title": "Fully responsive and custom designs.",
+        "button": "Show portfolio"
+      },
+      "card": {
+        "skill1": {
+          "title": "Website Design",
+          "description": "Create a website that strengthens your company’s brand while ensuring ease of use and simplicity."
+        },
+        "skill2": {
+          "title": "Frontend Development",
+          "description": "Sketch integrations in Boostrap or pure HTML/CSS and modern single page apps development with Angular or React."
+        },
+        "skill3": {
+          "title": "Backend Development",
+          "description": "Translating your business logics into secure and maintainable code with Java (Spring) or Python (Django)."
+        }
+      }
+    }
+  },
+  "component": {
+    "navbar": {
+        "home": "Home",
+        "portfolio": "Portfolio",
+        "services": "Services",
+        "about": "About",
+        "blog": "Blog",
+        "tutorials": "Tutorials",
+        "contact": "Contact"
+    },
+    "languageselector": {
+      "es": "Español",
+      "en": "English",
+      "ru": "Русский"
+    },
+    "footer": {
+      "privacyPolicy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy",
+      "termsConditions": "Terms & Conditions"
+    }
+  },
+  "common": {
+    "learnMore": "Learn more"
+  }
+}
