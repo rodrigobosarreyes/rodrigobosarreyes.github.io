@@ -1,0 +1,32 @@
+.footer {
+  /* height: 100px; */
+  /* display: flex; */
+}
+
+.footer .rb-social-media img {
+  cursor: pointer;
+}
+
+.footer .pages ul li a {
+  color: #fff;
+}
+
+.footer .pages ul {
+  /* list-style: none; */
+}
+
+.footer .pages .list-group-item {
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid white;
+  padding: 1px 10px;
+}
+
+.footer .pages .list-group-item:last-child {
+  border-right: none;
+}
+
+.copyright {
+  font-size: small;
+  color: #c4c4c4;
+}

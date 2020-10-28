@@ -1,0 +1,8 @@
+.dropdown-unstyled {
+  border: none;
+  background: transparent;
+}
+
+.dropdown-unstyled::after {
+  display: none;
+}

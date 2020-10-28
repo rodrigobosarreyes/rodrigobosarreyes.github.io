@@ -1,0 +1,62 @@
+import React from 'react'
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
+
+export default function Navbar() {
+  const { t, i18n } = useTranslation();
+  return (
+    <div className="bg-indigo-dye sticky-top rb-shadow">
+      <nav 
+      className="navbar navbar-expand-lg navbar-dark justify-content-md-center justify-content-start">
+        <a className="navbar-brand" href="/">Navbar</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNav">
+          <ul className="navbar-nav mx-auto text-md-center text-left">
+            <li className="nav-item active">
+              <a className="nav-link" href="/">
+                {t('component.navbar.home')}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                {t('component.navbar.portfolio')}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                {t('component.navbar.services')}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                {t('component.navbar.about')}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                {t('component.navbar.blog')}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                {t('component.navbar.tutorials')}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                {t('component.navbar.contact')}
+              </a>
+            </li>
+          </ul>
+          <ul className="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
+            <li className="nav-item">
+                <LanguageSelector />
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  )
+}
