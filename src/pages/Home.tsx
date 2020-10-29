@@ -8,8 +8,8 @@ export default function Home() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="container mt-4 p-3">
-      <div className="text-center font-color-dark bg-grey p-2 row">
+    <div className="container mt-3 pb-3">
+      <div className="text-center font-color-dark bg-grey pb-2 row">
         <div className="col-12">
           <h4>{ t('page.home.title1') }</h4>
         </div>

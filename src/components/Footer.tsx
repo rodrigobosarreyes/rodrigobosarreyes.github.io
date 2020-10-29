@@ -14,7 +14,7 @@ export default function Footer() {
         <img className="mr-2" src={twitterLogo} alt="@rodrigobosarreyes" title="@rodrigobosarreyes" width="21"/>
         <img className="mr-2" src={linkedinLogo} alt="@rodrigobosarreyes" title="@rodrigobosarreyes" width="21"/>
       </div>
-      <div className="pages d-flex justify-content-center mb-2">
+      <div className="pages d-none d-md-flex justify-content-center mb-2">
         <ul className="list-group list-group-horizontal">
           <li className="list-group-item">
             <a className="" href="/">
