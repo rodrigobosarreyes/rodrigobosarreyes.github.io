@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './OutlineBtn.scss';
 
 type ButtonProps = {
-  text: string
+  text: string,
+  icon?: any
 }
 
 export class OutlineBtn extends Component<ButtonProps> {
@@ -12,7 +13,7 @@ export class OutlineBtn extends Component<ButtonProps> {
   
   render() {
     return (
-      <button className="dark">{this.props.text}</button>
+      <button className="dark">{this.props.text} {this.props.icon}</button>
     )
   }
 }

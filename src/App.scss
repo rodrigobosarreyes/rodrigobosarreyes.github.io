@@ -1,3 +1,9 @@
+@import './scss/variables';
 $font-size-base: 1rem;
+
+.bg-home {
+  background-color: $background;
+}
+$dark: $background;
 
 @import "~bootstrap/scss/bootstrap";
