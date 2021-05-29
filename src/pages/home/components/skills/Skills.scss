@@ -1,0 +1,62 @@
+.skill__value {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+
+}
+
+._tmp {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: red;
+  position: absolute;
+  border-radius: 50%;
+  right: -2px;
+  top: -4px;
+}
+
+.line {
+  position: absolute;
+  height: 5px;
+  background-color: red;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  &__25 {
+    @extend .line;
+    width: calc(25% - 30px);
+    &::after {
+      @extend ._tmp;
+    }
+  }
+  &__50 {
+    @extend .line;
+    width: calc(50% - 30px);;
+    &::after {
+      @extend ._tmp;
+    }
+  }
+  &__75 {
+    @extend .line;
+    width: calc(75% - 30px);;
+    &::after {
+      @extend ._tmp;
+    }
+  }
+  &__100 {
+    @extend .line;
+    width: calc(100% - 30px);
+    &::after {
+      @extend ._tmp;
+    }
+  }
+}

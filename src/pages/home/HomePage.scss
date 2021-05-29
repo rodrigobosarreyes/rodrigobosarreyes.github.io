@@ -1,10 +1,10 @@
 @import '../../scss/variables';
 
-// .home_page__container {
-//   background-color: $background;
-//   height: 100vh;
-//   font-family: 'Montserrat', sans-serif;
-// }
+main {
+  position: relative;
+  z-index: 100;
+  background-color: white;
+}
 
 .container {
   height: 100%;

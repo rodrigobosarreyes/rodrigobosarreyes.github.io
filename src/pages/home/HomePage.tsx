@@ -13,11 +13,13 @@ export class HomePage extends Component {
     return (
       <div>
         <Home />
-        <HomeNavbar />
-        <About />
-        <Projects />
-        <Blog />
-        <Contact />
+        <main>
+          <HomeNavbar />
+          <About />
+          <Projects />
+          <Blog />
+          <Contact />
+        </main>
       </div>
     )
   }

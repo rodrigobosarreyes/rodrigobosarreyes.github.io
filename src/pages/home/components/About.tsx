@@ -1,8 +1,10 @@
 import { faBrain, faCalendarAlt, faLaptopHouse, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Component } from 'react'
+import React, { Component } from 'react'
 import FeatureCard from '../../../core/components/feature-card/FeatureCard';
 import './About.scss';
+import pp from '../../../assets/images/about/leyo.jpeg';
+import Skills from './skills/Skills';
 
 export class About extends Component {
   designIcon = <FontAwesomeIcon icon={faPaintBrush} className="feature_card__icon" />
@@ -29,6 +31,22 @@ export class About extends Component {
                     description={i.description} />
             })
           }
+        </div>
+        <div className="personal_info__container row justify-content-center">
+          <article className="col-6">
+            <div className="image__container">
+              <img src={pp} alt="Selfie :)" />
+            </div>
+            <div className="text__container text-center mt-3">
+              <h3>Who I am?</h3>
+              <p>I'm a full-stack developer for <a href="/">everis</a> in Salamanca, Spain. I'm passionate about technology and I love creating new products and I enjoy its process. Also I like to share my knowledge with anyone, I'm an open book!.</p>
+            </div>
+          </article>
+          <article className="col-6">
+            <div className="">
+              <Skills />
+            </div>
+          </article>
         </div>
       </section>
     )
