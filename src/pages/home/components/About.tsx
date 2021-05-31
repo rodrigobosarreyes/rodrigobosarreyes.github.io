@@ -1,10 +1,10 @@
 import { faBrain, faCalendarAlt, faLaptopHouse, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { Component } from 'react'
+import { Component } from 'react'
 import FeatureCard from '../../../core/components/feature-card/FeatureCard';
 import './About.scss';
 import pp from '../../../assets/images/about/leyo.jpeg';
-import Skills from './skills/Skills';
+import Skills, { ISkill } from './skills/Skills';
 
 export class About extends Component {
   designIcon = <FontAwesomeIcon icon={faPaintBrush} className="feature_card__icon" />
@@ -18,6 +18,25 @@ export class About extends Component {
     {icon: this.businessIcon, title: 'Business', description: 'Translating your business logics into secure and maintainable code.'},
     {icon: this.flexIcon, title: 'Flexibility', description: 'Create a website that strengthens your company’s brand while ensuring ease of use and simplicity.'}
   ]
+
+  skills: ISkill[] = [
+    {name: 'Angular', level: 100},
+    {name: 'React', level: 50},
+    {name: 'Typescript', level: 75},
+    {name: 'Javascript', level: 75},
+    {name: 'Bootstrap', level: 75},
+    {name: 'HTML/CSS', level: 100},
+    {name: 'NodeJS', level: 50},
+    {name: 'Python', level: 75},
+    {name: 'Java', level: 75},
+  ]
+
+  constructor(props: any) {
+    super(props);
+    this.skills.sort((a, b) => {
+      return b.level - a.level;
+    })
+  }
   
   render() {
     return (
@@ -42,9 +61,9 @@ export class About extends Component {
               <p>I'm a full-stack developer for <a href="/">everis</a> in Salamanca, Spain. I'm passionate about technology and I love creating new products and I enjoy its process. Also I like to share my knowledge with anyone, I'm an open book!.</p>
             </div>
           </article>
-          <article className="col-6">
+          <article className="col-6 align-self-center">
             <div className="">
-              <Skills />
+              <Skills skills={this.skills} />
             </div>
           </article>
         </div>
