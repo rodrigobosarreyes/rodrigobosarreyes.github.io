@@ -10,26 +10,8 @@
     font-weight: bold;
   }
 
-  .card {
-    position: relative;
-    background-image: url('https://dummyimage.com/600x400/000/fff');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border: 1px solid white;
-
-    &::before {
-      content: "";
-      float: left;
-      padding-top: 100%;
-    }
-
-    &:hover {
-      opacity: 0;
-    }
-  }
-  .text {
-    position: absolute;
+  .projects__content {
+    padding-top: 70px;
   }
 }
 
