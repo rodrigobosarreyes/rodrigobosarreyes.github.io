@@ -14,9 +14,9 @@ export class About extends Component {
 
   cards = [
     {icon: this.designIcon, title: 'Design', description: 'Create a website that strengthens your company’s brand while ensuring ease of use and simplicity.'},
-    {icon: this.remoteIcon, title: 'Teleworking', description: 'Create a website that strengthens your company’s brand while ensuring ease of use and simplicity.'},
+    {icon: this.remoteIcon, title: 'Teleworking', description: 'Availability to work remotely, I have worked remotly for more than a year.'},
     {icon: this.businessIcon, title: 'Business', description: 'Translating your business logics into secure and maintainable code.'},
-    {icon: this.flexIcon, title: 'Flexibility', description: 'Create a website that strengthens your company’s brand while ensuring ease of use and simplicity.'}
+    {icon: this.flexIcon, title: 'Flexibility', description: 'I\'m able to adapt my schedule to the project\'s needs'}
   ]
 
   skills: ISkill[] = [
@@ -42,12 +42,16 @@ export class About extends Component {
     return (
       <section id="about" className="container">
         <h2>ABOUT</h2>
-        <div className="feauture__container">
+        <div className="feauture__container row">
           {this.cards.map( i => {
-            return <FeatureCard
+            return (
+              <div className="col-3">
+                <FeatureCard
                     icon={i.icon}
                     title={i.title}
                     description={i.description} />
+              </div>
+            )
             })
           }
         </div>
@@ -58,7 +62,7 @@ export class About extends Component {
             </div>
             <div className="text__container text-center mt-3">
               <h3>Who I am?</h3>
-              <p>I'm a full-stack developer for <a href="/">everis</a> in Salamanca, Spain. I'm passionate about technology and I love creating new products and I enjoy its process. Also I like to share my knowledge with anyone, I'm an open book!.</p>
+              <p>I'm a full-stack developer for <a href="https://www.everis.com/" target="_blank" rel="noopener noreferrer">everis</a> in Salamanca, Spain. I'm passionate about technology and I love creating new products and I enjoy its process. Also I like to share my knowledge with anyone, I'm an open book!.</p>
             </div>
           </article>
           <article className="col-6 align-self-center">

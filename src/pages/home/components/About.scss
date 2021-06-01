@@ -1,3 +1,5 @@
+@import '../../../scss/variables';
+
 #about {
   position: relative;
   min-height: 100vh;
@@ -43,5 +45,15 @@
   h3 {
     font-size: 2.5rem;
     font-weight: bold;
+  }
+}
+
+a {
+  color: $auburn;
+  font-weight: 500;
+
+  &:hover {
+    color: $auburn;
+    text-decoration: none;
   }
 }
