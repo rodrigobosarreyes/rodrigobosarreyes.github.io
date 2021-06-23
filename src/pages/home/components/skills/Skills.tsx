@@ -17,9 +17,9 @@ export class Skills extends Component<SkillsProps> {
             <span>Specialist</span>
           </div>
         </div>
-        {this.props.skills.map(s => {
+        {this.props.skills.map( (s: ISkill, idx) => {
           return (
-            <div className="row">
+            <div className="row" key={idx}>
               <div className="skill__label col-3">{s.name}</div>
               <div className="skill__value col">
                 <div className="bar"></div>

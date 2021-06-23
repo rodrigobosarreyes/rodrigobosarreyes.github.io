@@ -25,27 +25,6 @@ export class Projects extends Component {
                 </div>
               )
             })}
-            {/* <div className="col-3">
-              <ProjectCard />
-            </div>
-            <div className="col-3">
-              <ProjectCard />
-            </div>
-            <div className="col-3">
-              <ProjectCard />
-            </div>
-            <div className="col-3">
-              <ProjectCard />
-            </div>
-            <div className="col-3">
-              <ProjectCard />
-            </div>
-            <div className="col-3">
-              <ProjectCard />
-            </div>
-            <div className="col-3">
-              <ProjectCard />
-            </div> */}
           </div>
         </section>  
       </div>
