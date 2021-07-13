@@ -13,8 +13,6 @@ export class Home extends Component {
         <div className="container">
           <div className="row h-100 align-items-center">
             <div className="col-12">
-              {/* <h1>Hello, I'm <span className="name">Rodrigo Bosarreyes</span>.</h1> */}
-              {/* <h1>I'm a full-stack web developer.</h1> */}
               <TypewriterText></TypewriterText>
               <div className="btn-container">
                 <OutlineBtn text="View my work" icon={this.icon}/>

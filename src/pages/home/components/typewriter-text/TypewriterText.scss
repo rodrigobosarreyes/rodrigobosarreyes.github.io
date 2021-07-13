@@ -3,7 +3,7 @@
 $dynamicTextHeight: 90px;
 $typingMaxLength: 20;
 $typingDuration: 4.5s;
-$slideElements: 4;
+$slideElements: 5;
 $slideDuration: calc(#{$typingDuration} * #{$slideElements});
 $slideTop: calc((#{$dynamicTextHeight} * #{$slideElements}) * -1);
 
