@@ -1,11 +1,14 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Component } from 'react';
+import { Link } from 'react-scroll';
 import OutlineBtn from '../../../../core/components/outline-btn/OutlineBtn';
-import TypewriterText from '../typewriter-text/TypewriterText';
+import Typewriter from 'typewriter-effect';
+import './Home.scss';
 
 export class Home extends Component {
   icon = <FontAwesomeIcon icon={faArrowRight} />;
+  nouns = ['Rodrigo Bosarreyes', 'a Full-Stack Developer', 'a Software Designer', 'a Mentor'];
 
   render() {
     return (
@@ -13,9 +16,11 @@ export class Home extends Component {
         <div className="container">
           <div className="row h-100 align-items-center">
             <div className="col-12">
-              <TypewriterText></TypewriterText>
+              <h1>I'm <Typewriter options={{strings: this.nouns, loop: true, autoStart: true}}></Typewriter></h1>
               <div className="btn-container">
-                <OutlineBtn text="View my work" icon={this.icon}/>
+                <Link activeClass="active" spy={true} smooth={true} duration={500} to='projects'>
+                  <OutlineBtn text="View my work" icon={this.icon}/>
+                </Link>
               </div>
             </div>
           </div>

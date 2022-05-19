@@ -1,7 +1,16 @@
 import { Component } from 'react';
-import { Nav, Navbar } from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap';
+import { Link } from "react-scroll";
 
 export class HomeNavbar extends Component {
+  links = [
+    {label: 'Home', link: 'home-container'},
+    {label: 'About', link: 'about'},
+    {label: 'Projects', link: 'projects'},
+    {label: 'Blog', link: 'blog'},
+    {label: 'Contact', link: 'contact'}
+  ];
+  
   constructor(props: any) {
     super(props);
     window.onscroll = () => {
@@ -38,15 +47,13 @@ export class HomeNavbar extends Component {
         </style>
         <div className="container navbar-container">
           <Navbar bg="dark" expand="lg" id="home-navbar" variant="dark" style={{ fontSize: '1.7rem' }}>
-            <Navbar.Brand href="#home" style={{ fontSize: '1.7rem' }}>Rodrigo Bosarreyes</Navbar.Brand>
+            <Navbar.Brand href="#" style={{ fontSize: '1.7rem' }}>Rodrigo Bosarreyes</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link bsPrefix="my-link" href="#home-container">Home</Nav.Link>
-                <Nav.Link bsPrefix="my-link" href="#about">About</Nav.Link>
-                <Nav.Link bsPrefix="my-link" href="#projects">Projects</Nav.Link>
-                <Nav.Link bsPrefix="my-link" href="#blog">Blog</Nav.Link>
-                <Nav.Link bsPrefix="my-link" href="#contact">Contact</Nav.Link>
+                {this.links.map( link => (
+                  <Nav.Link key={link.link}><Link className='my-link' activeClass="active" spy={true} smooth={true} duration={500} to={link.link}>{link.label}</Link></Nav.Link>
+                ))}
               </Nav>
             </Navbar.Collapse>
           </Navbar>

@@ -7,10 +7,6 @@ type ButtonProps = {
 }
 
 export class OutlineBtn extends Component<ButtonProps> {
-  constructor(props: any) {
-    super(props);
-  }
-  
   render() {
     return (
       <button className="dark">{this.props.text} {this.props.icon}</button>
