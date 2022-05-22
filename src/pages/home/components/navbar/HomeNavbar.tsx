@@ -52,7 +52,7 @@ export class HomeNavbar extends Component {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 {this.links.map( link => (
-                  <Nav.Link key={link.link}><Link className='my-link' activeClass="active" spy={true} smooth={true} duration={500} to={link.link}>{link.label}</Link></Nav.Link>
+                  <Link key={link.link} className='my-link' activeClass="active" spy={true} smooth={true} duration={500} to={link.link}>{link.label}</Link>
                 ))}
               </Nav>
             </Navbar.Collapse>

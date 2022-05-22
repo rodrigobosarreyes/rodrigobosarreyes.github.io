@@ -31,6 +31,9 @@
   overflow: hidden;
   margin: auto;
   background-color: gray;
+  float: left;
+  margin-right: 4rem;
+  shape-outside: ellipse(133px closest-side at center center);
 
   img {
     max-width: 100%;

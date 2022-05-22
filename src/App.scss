@@ -6,4 +6,8 @@ $font-size-base: 1rem;
 }
 $dark: $background;
 
+a {
+  cursor: pointer;
+}
+
 @import "~bootstrap/scss/bootstrap";

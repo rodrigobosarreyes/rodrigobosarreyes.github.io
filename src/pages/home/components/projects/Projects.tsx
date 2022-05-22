@@ -20,7 +20,7 @@ export class Projects extends Component {
           <div className="projects__content row no-gutters">
             {this.projects.map( p => {
               return (
-                <div className="col-3 my-3">
+                <div className="col-3 my-3" key={p.idArrElement}>
                   <ProjectCard idArrElement={p.idArrElement} idLeftElement={p.idLeftElement} imgUrl={p.imgUrl} />
                 </div>
               )

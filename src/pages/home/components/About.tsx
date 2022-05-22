@@ -13,8 +13,8 @@ export class About extends Component {
   flexIcon = <FontAwesomeIcon icon={faCalendarAlt} className="feature_card__icon" />
 
   cards = [
-    {icon: this.designIcon, title: 'Design', description: 'Create a website that strengthens your company’s brand while ensuring ease of use and simplicity.'},
-    {icon: this.remoteIcon, title: 'Teleworking', description: 'Availability to work remotely, I have worked remotly for more than a year.'},
+    {icon: this.designIcon, title: 'Design', description: 'Create a website that strengthens your company\'s brand while ensuring ease of use and simplicity.'},
+    {icon: this.remoteIcon, title: 'Teleworking', description: 'Availability to work remotely, I have worked remotly for more than two years.'},
     {icon: this.businessIcon, title: 'Business', description: 'Translating your business logics into secure and maintainable code.'},
     {icon: this.flexIcon, title: 'Flexibility', description: 'I\'m able to adapt my schedule to the project\'s needs'}
   ]
@@ -28,14 +28,22 @@ export class About extends Component {
     {name: 'HTML/CSS', level: 100},
     {name: 'NodeJS', level: 50},
     {name: 'Python', level: 75},
-    {name: 'Java', level: 75},
+    {name: 'Java', level: 100},
   ]
 
+  years = new Date().getFullYear() - 2019;
+  
   constructor(props: any) {
     super(props);
     this.skills.sort((a, b) => {
       return b.level - a.level;
     })
+  }
+
+  generateAnchor(link: string, text: string): JSX.Element {
+    return (
+      <a href={link} target="_blank" rel="noopener noreferrer">{text}</a>
+    )
   }
   
   render() {
@@ -57,12 +65,19 @@ export class About extends Component {
         </div>
         <div className="personal_info__container row justify-content-center">
           <article className="col-6">
+
             <div className="image__container">
               <img src={pp} alt="Selfie :)" />
             </div>
-            <div className="text__container text-center mt-3">
-              <h3>Who I am?</h3>
-              <p>I'm a full-stack developer for <a href="https://www.everis.com/" target="_blank" rel="noopener noreferrer">everis</a> in Salamanca, Spain. I'm passionate about technology and I love creating new products and I enjoy its process. Also I like to share my knowledge with anyone, I'm an open book!.</p>
+            <div className="text__container mt-3">
+              <h3 className='text-center'>Who I am?</h3>
+              <p className=''>I'm a full-stack developer for <a href="https://www.nttdata.com/" target="_blank" rel="noopener noreferrer"><strong>NTT DATA </strong></a> 
+              since 2019 in Salamanca, Spain. During these {this.years} years I have been able to successfully face multiple challengers which range from developing
+              a Landing Page, to leading an entire team, through the development of corporative web applications in which I have had the opportunity to experiment with technologies
+              such as {this.generateAnchor('https://angular.io/', 'Angular')}, {this.generateAnchor('https://www.java.com/en/download/help/whatis_java.html', 'Java')},
+              &nbsp;{this.generateAnchor('https://www.python.org/', 'Python')} and {this.generateAnchor('https://www.docker.com/', 'Docker')}.
+              As you can see, I'm passionate about technology, I love creating new products and I enjoy its process.
+              Also I like to share my knowledge with anyone, I'm an open book!.</p>
             </div>
           </article>
           <article className="col-6 align-self-center">
