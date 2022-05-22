@@ -12,6 +12,10 @@
     font-size: 4.2rem;
     font-weight: bold;
   }
+
+  .skills__container {
+    min-width: 400px;
+  }
 }
 
 .feature_card__icon {
@@ -31,9 +35,7 @@
   overflow: hidden;
   margin: auto;
   background-color: gray;
-  float: left;
-  margin-right: 4rem;
-  shape-outside: ellipse(133px closest-side at center center);
+  margin: auto;
 
   img {
     max-width: 100%;
@@ -44,6 +46,7 @@
 .personal_info__container {
   margin-top: 50px;
   font-size: 1.3rem;
+  overflow: auto;
 
   h3 {
     font-size: 2.5rem;
@@ -58,5 +61,14 @@ a {
   &:hover {
     color: $auburn;
     text-decoration: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .image__container {
+    float: left;
+    shape-outside: ellipse(133px closest-side at center center);
+    margin: none;
+    margin-right: 5rem;
   }
 }

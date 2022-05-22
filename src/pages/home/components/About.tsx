@@ -53,7 +53,7 @@ export class About extends Component {
         <div className="feauture__container row">
           {this.cards.map( i => {
             return (
-              <div className="col-3">
+              <div className="col col-lg-3 mb-4">
                 <FeatureCard
                     icon={i.icon}
                     title={i.title}
@@ -64,12 +64,12 @@ export class About extends Component {
           }
         </div>
         <div className="personal_info__container row justify-content-center">
-          <article className="col-6">
+          <article className="col-12 col-lg-6">
 
             <div className="image__container">
               <img src={pp} alt="Selfie :)" />
             </div>
-            <div className="text__container mt-3">
+            <div className="text__container mt-3 px-3">
               <h3 className='text-center'>Who I am?</h3>
               <p className=''>I'm a full-stack developer for <a href="https://www.nttdata.com/" target="_blank" rel="noopener noreferrer"><strong>NTT DATA </strong></a> 
               since 2019 in Salamanca, Spain. During these {this.years} years I have been able to successfully face multiple challengers which range from developing
@@ -77,11 +77,11 @@ export class About extends Component {
               such as {this.generateAnchor('https://angular.io/', 'Angular')}, {this.generateAnchor('https://www.java.com/en/download/help/whatis_java.html', 'Java')},
               &nbsp;{this.generateAnchor('https://www.python.org/', 'Python')} and {this.generateAnchor('https://www.docker.com/', 'Docker')}.
               As you can see, I'm passionate about technology, I love creating new products and I enjoy its process.
-              Also I like to share my knowledge with anyone, I'm an open book!.</p>
+              Also I like to share my knowledge with everyone, I'm an open book!.</p>
             </div>
           </article>
-          <article className="col-6 align-self-center">
-            <div className="">
+          <article className="col-12 col-lg-6 align-self-center">
+            <div className="skills__container">
               <Skills skills={this.skills} />
             </div>
           </article>
