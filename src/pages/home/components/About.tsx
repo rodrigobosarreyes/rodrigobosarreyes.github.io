@@ -66,7 +66,7 @@ export class About extends Component {
         <div className="personal_info__container row justify-content-center">
           <article className="col-12 col-lg-6">
 
-            <div className="image__container mr-3">
+            <div className="image__container">
               <img src={pp} alt="Selfie :)" />
             </div>
             <div className="text__container mt-3 px-3">
