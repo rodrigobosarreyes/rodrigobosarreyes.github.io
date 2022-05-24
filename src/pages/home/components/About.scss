@@ -35,7 +35,6 @@
   overflow: hidden;
   margin: auto;
   background-color: gray;
-  margin: auto;
 
   img {
     max-width: 100%;
@@ -68,7 +67,7 @@ a {
   .image__container {
     float: left;
     shape-outside: ellipse(133px closest-side at center center);
-    margin: none;
+    margin: 0;
     margin-right: 5rem;
   }
 }
