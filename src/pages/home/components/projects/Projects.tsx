@@ -1,15 +1,18 @@
 import { Component } from 'react'
-import { ProjectCard } from '../../../../core/components/project-card/ProjectCard';
+import ProjectCard from '../../../../core/components/project-card/ProjectCard';
 import './Projects.scss';
 
 export class Projects extends Component {
   projects = [
-    {idArrElement: 'arr-1', idLeftElement: 'left-1', imgUrl: 'https://dummyimage.com/601x400/000/fff'},
-    {idArrElement: 'arr-2', idLeftElement: 'left-2', imgUrl: 'https://dummyimage.com/602x400/000/fff'},
-    {idArrElement: 'arr-3', idLeftElement: 'left-3', imgUrl: 'https://dummyimage.com/603x400/000/fff'},
-    {idArrElement: 'arr-4', idLeftElement: 'left-4', imgUrl: 'https://dummyimage.com/604x400/000/fff'},
-    {idArrElement: 'arr-5', idLeftElement: 'left-5', imgUrl: 'https://dummyimage.com/605x400/000/fff'},
-    {idArrElement: 'arr-6', idLeftElement: 'left-6', imgUrl: 'https://dummyimage.com/606x400/000/fff'},
+    {imgUrl: 'projects/batatabit.png', children: <>
+      <p className='text-center h3'><a href='https://rodrigobosarreyes.github.io/batatabit/' target="_blank" rel="noopener noreferrer">Batatabit</a></p>
+      <p className='px-4 description'>My first landing page, made with HTML and CSS using flexbox, fully responsive. <a href='https://rodrigobosarreyes.github.io/batatabit/' target="_blank" rel="noopener noreferrer">Click here!</a></p>
+    </>},
+    {imgUrl: 'https://dummyimage.com/602x400/000/fff'},
+    {imgUrl: 'https://dummyimage.com/603x400/000/fff'},
+    {imgUrl: 'https://dummyimage.com/604x400/000/fff'},
+    {imgUrl: 'https://dummyimage.com/605x400/000/fff'},
+    {imgUrl: 'https://dummyimage.com/606x400/000/fff'},
   ]
   
   render() {
@@ -18,10 +21,12 @@ export class Projects extends Component {
         <section id="projects" className="container">
           <h2>PROJECTS</h2>
           <div className="projects__content row no-gutters">
-            {this.projects.map( p => {
+            {this.projects.map( (p, i) => {
               return (
-                <div className="col my-3" key={p.idArrElement}>
-                  <ProjectCard idArrElement={p.idArrElement} idLeftElement={p.idLeftElement} imgUrl={p.imgUrl} />
+                <div className="col my-3" key={i}>
+                  <ProjectCard imgUrl={p.imgUrl}>
+                    {p.children}
+                  </ProjectCard>
                 </div>
               )
             })}
